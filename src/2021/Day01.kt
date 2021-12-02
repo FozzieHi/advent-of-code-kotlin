@@ -1,3 +1,5 @@
+package `2021`
+
 fun main() {
     fun part1(input: List<String>): Int {
         var count = 0
