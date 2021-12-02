@@ -27,10 +27,18 @@ fun main() {
     }
 
     // test if implementation meets criteria from the description, like:
-    val testInputPart1 = readInputText("Day01Part1_test").toCharArray()
-    val testInputPart2 = readInputText("Day01Part2_test").toCharArray()
-    check(part1(testInputPart1) == 3)
-    check(part2(testInputPart2) == 5)
+    check(part1("(())".toCharArray()) == 0)
+    check(part1("()()".toCharArray()) == 0)
+    check(part1("(((".toCharArray()) == 3)
+    check(part1("(()(()(".toCharArray()) == 3)
+    check(part1("))(((((".toCharArray()) == 3)
+    check(part1("())".toCharArray()) == -1)
+    check(part1("))(".toCharArray()) == -1)
+    check(part1(")))".toCharArray()) == -3)
+    check(part1(")())())".toCharArray()) == -3)
+
+    check(part2(")".toCharArray()) == 1)
+    check(part2("()())".toCharArray()) == 5)
 
     val input = readInputText("Day01").toCharArray()
     println(part1(input))
