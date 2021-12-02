@@ -23,7 +23,7 @@ fun main() {
                 return i + 1
             }
         }
-        return floor
+        return -1
     }
 
     // test if implementation meets criteria from the description, like:
