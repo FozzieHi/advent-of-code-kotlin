@@ -4,7 +4,7 @@ fun main() {
     fun part1(input: List<Int>): Int {
         var count = 0
         var lastLine = 0
-        for (line in input) {
+        input.forEach { line ->
             if (line > lastLine) {
                 count++
             }
@@ -18,7 +18,7 @@ fun main() {
         var sum = 0
         var lastSum = 0
         val data = mutableListOf<Int>()
-        for (line in input) {
+        input.forEach { line ->
             sum += line
             data.add(line)
             if (data.size == 4) {

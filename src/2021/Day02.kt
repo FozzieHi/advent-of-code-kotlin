@@ -4,9 +4,10 @@ fun main() {
     fun part1(input: List<String>): Int {
         var horizontal = 0
         var depth = 0
-        for (line in input) {
+        input.forEach { line ->
             val regex = """^(forward|down|up) (\d)$""".toRegex()
-            val (action, amount) = regex.find(line)?.destructured ?: error("Could not find action and amount from input.")
+            val (action, amount) = regex.find(line)?.destructured
+                ?: error("Could not find action and amount from input.")
             when (action) {
                 "forward" -> horizontal += amount.toInt()
                 "down" -> depth += amount.toInt()
@@ -20,9 +21,10 @@ fun main() {
         var horizontal = 0
         var depth = 0
         var aim = 0
-        for (line in input) {
+        input.forEach { line ->
             val regex = """^(forward|down|up) (\d)$""".toRegex()
-            val (action, amount) = regex.find(line)?.destructured ?: error("Could not find action and amount from input.")
+            val (action, amount) = regex.find(line)?.destructured
+                ?: error("Could not find action and amount from input.")
             when (action) {
                 "forward" -> {
                     horizontal += amount.toInt()
