@@ -2,7 +2,7 @@
 
 Welcome to the Advent of Code[^aoc] Kotlin project created by [FozzieHi][github] using the [Advent of Code Kotlin Template][template] delivered by JetBrains.
 
-In this repository, FozzieHi provides solutions for the puzzles using [Kotlin][kotlin] language.
+In this repository, FozzieHi provides solutions for the puzzles using the [Kotlin][kotlin] language.
 
 [^aoc]:
     [Advent of Code][aoc] – An annual event of Christmas-oriented programming challenges started December 2015.
