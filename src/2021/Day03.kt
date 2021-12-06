@@ -23,7 +23,7 @@ fun main() {
         return input.map { char -> if (char == '0') "1" else "0" }.joinToString("")
     }
 
-    fun getCritera(input: MutableList<List<Int>>, start: Int, most: Boolean): String {
+    fun getCriteria(input: MutableList<List<Int>>, start: Int, most: Boolean): String {
         val droppedLines: MutableList<List<Int>> = mutableListOf()
         val mostCommon = (if (most) mostCommon(input) else invert(mostCommon(input))).split("").filter { it2 -> it2.isNotEmpty() }.map { it3 -> it3.toInt() }
         val mostCommonChar = mostCommon[start]
@@ -35,7 +35,7 @@ fun main() {
         }
         input.removeAll(droppedLines)
         return if (input.size > 1) {
-            getCritera(input, start + 1, most)
+            getCriteria(input, start + 1, most)
         } else {
             val result = input[0]
             result.joinToString("") { it.toString() }
@@ -49,8 +49,8 @@ fun main() {
     }
 
     fun part2(input: List<List<Int>>): Int {
-        val oxygen = getCritera(input.toMutableList(), 0, true)
-        val carbonDioxide = getCritera(input.toMutableList(), 0, false)
+        val oxygen = getCriteria(input.toMutableList(), 0, true)
+        val carbonDioxide = getCriteria(input.toMutableList(), 0, false)
         return (oxygen.toInt(2) * carbonDioxide.toInt(2))
     }
 
